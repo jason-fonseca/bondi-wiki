@@ -4,8 +4,10 @@ h2. Properties
 
 h2. Methods
 
-Server.Include
-Server.Execute
-Server.Transfer
-Server.ExecuteAsync
-Server.ExecuteAsyncNoReturn
+<p>
+* [[Server.Include]]
+* [[Server.Execute]]
+* [[Server.Transfer]]
+* [[Server.ExecuteAsync]]
+* [[Server.ExecuteAsyncNoReturn]]
+</p>
