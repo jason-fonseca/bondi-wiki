@@ -1,0 +1,14 @@
+Intrinsic Response object available in Bondi
+
+h2. Objects
+
+* [[Response.Headers]]
+* [[Response.Cookies]]
+
+h2. Properties
+
+* [[Response.ContentType]]
+* [[Response.Charset]]
+* [[Response.Expires]]
+* [[Response.Status]]
+* [[Response.Buffer]]
