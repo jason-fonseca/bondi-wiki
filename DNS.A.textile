@@ -1,2 +1,1 @@
-Return to DNS object
 Takes a name - returns an ip address (as a string)
