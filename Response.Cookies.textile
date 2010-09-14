@@ -11,3 +11,12 @@ As cookie values are assigned they are replaced by an internal cookie object and
 * Comment
 * Version
 </p>
+
+h2. Methods
+
+<p>
+The [[Response.Cookies]] object also supports a special method, Encrypt. When used, this function will assign a property to the [[Response.Cookies]] object that has its value encrypted. (See also [[Request.Cookies]].Decrypt)
+</p>
+<p>
+'''Usage:''' Response.Cookies.Encrypt('<property name>', <Key Object>, <Plaintext>)
+</p>
