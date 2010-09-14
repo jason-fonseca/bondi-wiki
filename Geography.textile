@@ -1,0 +1,6 @@
+h2. Method
+
+<p>
+* [[Geography.CountryFromIP]]
+* [[Geography.ResolveFromIP]]
+</p>
