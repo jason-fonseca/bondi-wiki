@@ -1,0 +1,13 @@
+h2. Properties
+
+* MD5 - evaluates to MD5 and has a HashSize property of 16
+* SHA1 - evaluates to SHA1 and has a HashSize property of 20
+* SHA256 - evaluates to SHA256 and has a HashSize property of 32
+* SHA512 - evaluates to SHA512 and has a HashSize property of 64
+<br/>
+* BLOWFISH - evaluates to BLOWFISH, has a KeySizes property of [16, 32, 64, 128] and a BlockSize property of 8
+* RC2 - evaluates to RC2, has a KeySizes property of [16, 32, 64] and a BlockSize property of 8
+* RC4 - evaluates to RC4, has a KeySizes property of [16, 32, 64, 128, 256] and a BlockSize property of 1
+* AES - evaluates to AES, has a KeySizes property of [16, 24, 32] and a BlockSize property of 16
+* DES - evaluates to DES, has a KeySizes property of [7] and a BlockSize property of 8
+* TripleDES - evalutes to 3DES, has a KeySizes property of [21] and a BlockSize property of 8
