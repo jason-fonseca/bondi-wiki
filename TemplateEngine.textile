@@ -5,6 +5,8 @@ constructable object available in [[ bondi]]
 h2. Properties
 
 Input
+RootDirectory
+QueryString
 
 h2. Methods
 
