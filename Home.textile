@@ -54,3 +54,7 @@ These environment vars need to be included within the spawn-bondi.sh script on l
 * BONDI_GEOIPDB - path to maxmind city database
 * BONDI_MAIL - semi colon delimited lists of mail server host:port form, mail drop path or mail command
 * BONDI_SCRIPTCACHE - set to "off" to inhibit script caching
+
+h3. Future
+
+In a spare moment assess "v8":http://code.google.com/p/v8/ over Spidermonkey
