@@ -12,3 +12,4 @@ h2. Properties
 * [[Response.Expires]]
 * [[Response.Status]]
 * [[Response.Buffer]]
+* [[Response.Compress]]
