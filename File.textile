@@ -1,15 +1,15 @@
 h2. Prototype Methods
 
-Open(<filename>, <mode>)
-OpenTemporaryFile(<initial path>, <mode - binary, text>)
-File.Rename(<filename>, <new filename>, flags)
-File.Copy(src, target, flags)
-File.Delete(<filename>, flags)
-Exists(<filename>)
-IsFile(<filename>)
-IsDirectory(<filename>)
-IsReadable(<filename>) - Not Implemented
-IsWriteable(<filename>) - Not Implemented
-IsExecutable(<filename>) - Not Implemented
-Stat(<filename>) - Not Implemented
-MimeType(<filename>) - Not Implemented
+* Open(filename, mode)
+* OpenTemporaryFile(nitial path, mode - binary, text)
+* [[File.Rename]](filename, new filename, flags)
+* [[File.Copy]](src, target, flags)
+* [[File.Delete]](filename, flags)
+* Exists(filename)
+* IsFile(filename)
+* IsDirectory(filename)
+* IsReadable(filename) - Not Implemented
+* IsWriteable(filename) - Not Implemented
+* IsExecutable(filename) - Not Implemented
+* Stat(filename) - Not Implemented
+* MimeType(filename) - Not Implemented
