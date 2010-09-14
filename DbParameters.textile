@@ -1,0 +1,22 @@
+h2. Properties
+
+* Boolean
+* Char
+* VarChar
+* WChar
+* WVarChar
+* LongVarChar
+* LongWVarChar
+* Currency
+* Date
+* GUID
+* TinyInt
+* SmallInt
+* Int
+* BigInt
+* Binary
+* VarBinary
+* LongVarBinary
+* Decimal
+* Single
+* Double
