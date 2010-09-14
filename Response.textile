@@ -12,4 +12,13 @@ h2. Properties
 * [[Response.Expires]]
 * [[Response.Status]]
 * [[Response.Buffer]]
-* [[Response.Compress]]
+
+h2. Methods
+
+* [[Response.Write]]
+* [[Response.BinaryWrite]]
+* [[Response.Flush]]
+* [[Response.Clear]]
+* [[Response.SendFile]]
+* [[Response.Rewrite]]
+* [[Response.End]]
