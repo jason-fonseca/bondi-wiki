@@ -13,3 +13,16 @@ h2. Prototype Methods
 * IsExecutable(filename) - Not Implemented
 * Stat(filename) - Not Implemented
 * MimeType(filename) - Not Implemented
+
+h2. Prototype Properties
+
+* Overwrite
+* Recursive
+
+h2. Methods
+
+
+* Name (read-only)
+* Closed (read-only)
+* Mode (read-only)
+* Type (read-only - file or directory)
