@@ -1,0 +1,1 @@
+Takes a name - returns the txt data against the record in the dns
