@@ -1,4 +1,4 @@
-H2. Prototype Methods
+h2. Prototype Methods
 
 Open(<filename>, <mode>)
 OpenTemporaryFile(<initial path>, <mode - binary, text>)
