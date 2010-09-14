@@ -21,6 +21,16 @@ h2. Prototype Properties
 
 h2. Methods
 
+* Read(size)
+* ReadLine(size)
+* ReadLines(sizehint)
+* Seek(offset ,whence)
+* Write(str)
+* WriteLines(sequence)
+* Truncate(size)
+* Close()
+
+h2. Properties
 
 * Name (read-only)
 * Closed (read-only)
