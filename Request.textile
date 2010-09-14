@@ -22,9 +22,8 @@ h2. Methods
 
 h2. Examples
 
-@
+@code@
 for(var x in Request.ServerVariables)
 {
 	Response.Write(x + ": " + Request.ServerVariables[x]);
 }
-@
