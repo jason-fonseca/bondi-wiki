@@ -1,1 +1,5 @@
-Welcome to the bondi wiki!
+Bondi is the execution environment for New World Order processing.
+
+It is primarily a Javascript engine provided by the "Mozilla Spidermonkey Project":http://www.mozilla.org/js/spidermonkey/. It also makes use of Sqlite3 [2], Libcurl [3], OpenSSL [4], zlib [5] and iconv [6] for the heavier lifting.
+
+It is similar in nature to ASP Classic from Microsoft but provides only an interpreted Javascript environment.
