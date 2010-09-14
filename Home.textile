@@ -7,6 +7,7 @@ It is similar in nature to ASP Classic from Microsoft but provides only an inter
 h1. Object Model
 
 h2. Intrinsic Objects (no need to instantiate)
+
 [[Application]]
 [[Request]]
 [[Response]]
@@ -23,6 +24,7 @@ h2. Intrinsic Objects (no need to instantiate)
 [[Queue]]
 
 h2. Constructable Objects
+
 [[FastCGIClient]]
 [[HttpClient]]
 [[FtpClient]]
@@ -34,12 +36,14 @@ h2. Constructable Objects
 [[Image]]
 
 h2. Command Line
+
 * -script
 * -xsendfile
 * -approot
 * -memlimit
 
 h2. Environment
+
 These environment vars need to be included within the spawn-bondi.sh script on linux to ensure they're allowed in the bondi fcgi environment. All other environment variables are wiped.
 * BONDI_SCRIPT
 * BONDI_STARTSCRIPT
