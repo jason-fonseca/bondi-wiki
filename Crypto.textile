@@ -11,3 +11,16 @@ h2. Properties
 * AES - evaluates to AES, has a KeySizes property of [16, 24, 32] and a BlockSize property of 16
 * DES - evaluates to DES, has a KeySizes property of [7] and a BlockSize property of 8
 * TripleDES - evalutes to 3DES, has a KeySizes property of [21] and a BlockSize property of 8
+
+h2. Methods 
+
+* Hash
+@
+var hash = Crypto.Hash(<hash method - "MD5", "SHA1", "SHA256", "SHA512">, <string value>)
+@
+* Encrypt
+* Decrypt
+* EncryptAndSign
+* DecryptAndVerify
+* Random
+* Key - converts a string of bytes into a key that can be used in the encrypt and decrypt functions that will ensure the key is not hashed to convert a key to the correct size for the requested algorithm.
