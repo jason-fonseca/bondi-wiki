@@ -6,4 +6,4 @@ Response.Headers.Location = "http://www.ezimerchant.com/";
 
 h2. See Also
 
-[[response]]
+[[Response]]
