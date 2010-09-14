@@ -1,4 +1,4 @@
-h2 Objects
+h2. Objects
 
 <p>
 As cookie values are assigned they are replaced by an internal cookie object and the cookie value is placed onto the internal cookie object value. This object these supported properties:
