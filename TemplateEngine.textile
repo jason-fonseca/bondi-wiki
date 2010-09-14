@@ -1,5 +1,3 @@
-h2. TemplateEngine
-
 constructable object available in [[ bondi]]
 
 h2. Properties
