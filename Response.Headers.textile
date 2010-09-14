@@ -1,1 +1,5 @@
 h2. Examples
+
+<javascript>
+Response.Headers.Location = "http://www.ezimerchant.com/";
+</javascript>
