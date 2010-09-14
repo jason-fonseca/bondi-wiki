@@ -1,3 +1,3 @@
 h2. Application
 
-Instrinsic object available in [[bondi]]
+Instrinsic object available in [[ bondi]]
