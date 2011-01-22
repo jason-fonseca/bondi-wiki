@@ -6,6 +6,8 @@ h2. Methods
 
 <p>
 * [[Server.Include]]
+* [[Server.Require]]
+* [[Server.Import]]
 * [[Server.Execute]]
 * [[Server.Transfer]]
 * [[Server.ExecuteAsync]]
