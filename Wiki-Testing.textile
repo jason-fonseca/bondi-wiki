@@ -1,0 +1,79 @@
+|_. Table of Contents |
+| "About":#about
+"Command Line":#commandline
+"Environment":#environment
+"Global Objects":#globalobjects
+"Future":#future
+"Appendix A - Deprecated Features":#appendixa |
+
+h1(#about). About
+
+Bondi is the execution environment for New World Order processing.
+
+It is primarily a Javascript engine provided by the "Mozilla Spidermonkey Project":http://www.mozilla.org/js/spidermonkey/. It also makes use of "Sqlite3":http://www.sqlite.org/, "Libcurl":http://curl.haxx.se/, "OpenSSL":http://www.openssl.org/, "zlib":http://www.zlib.org/ and "iconv":http://www.gnu.org/software/libiconv/ for the heavier lifting.
+
+It is similar in nature to ASP Classic from Microsoft but provides only an interpreted Javascript environment and definitely does not make it easy to intermingle output and code!
+
+h1(#commandline). Command Line
+
+When running on the command line Bondi will accept the following arguments.
+
+|_. Parameter |_. Description |
+| -approot | |
+| -help | |
+| -memlimit | |
+| -script | |
+| -xsendfile | |
+
+h1(#environment). Environment
+
+These environment vars need to be included within the spawn-bondi.sh script on linux to ensure they're allowed in the bondi fcgi environment. All other environment variables are wiped.
+
+|_. Variable |_. Description |
+| BONDI_SCRIPT | |
+| BONDI_STARTSCRIPT | |
+| BONDI_XSENDFILE | |
+| BONDI_XREWRITE | |
+| BONDI_APPROOT | |
+| BONDI_MEMLIMIT | NOTE: not yet implemented |
+| BONDI_GEOIPDB | path to maxmind city database |
+| BONDI_MAIL | semi colon delimited lists of mail server host:port form, mail drop path or mail command |
+| BONDI_SCRIPTCACHE | set to "off" to inhibit script caching |
+
+h1(#globalobjects). Global Objects
+
+Along with support for the standard objects provided in the "MDN Javascript Reference":https://developer.mozilla.org/en/JavaScript/Reference#Global_Objects Bondi provides additional intrinsic[1] and constructor objects.
+
+|_. Object |_. Type |_. Description |
+| [[Application|Object Template]] | Intrinsic | |
+| [[Base64]] | Intrinsic | |
+| [[Crypto]] | Intrinsic | |
+| [[DbCommand]] | Constructor | |
+| [[DbConnection]] | Constructor | |
+| [[DbParameters]] | Intrinsic | |
+| [[DNS]] | Intrinsic | |
+| [[FastCGIClient]] | Constructor | |
+| [[File]] | Intrinsic | |
+| [[FtpClient]] | Constructor | |
+| [[Geography]] | Intrinsic | |
+| [[HttpClient]] | Constructor | |
+| [[Image]] | Constructor | |
+| [[MailMessage]] | Constructor | |
+| [[Queue]] | Intrinsic | |
+| [[Request]] | Intrinsic | |
+| [[Response]] | Intrinsic | |
+| [[Server]] | Intrinsic | |
+| [[TemplateEngine]] | Constructor | |
+| [[UrlClient]] | Constructor | |
+| [[UUID]] | Intrinsic | |
+| [[WhoIs]] | Intrinsic | |
+
+fn1. These are objects that do not need to be instantiated with a 'new' call, they work similarly to the standard 'Math' library object for example.
+
+h1(#future). Future
+
+In a spare moment assess "v8":http://code.google.com/p/v8/ over Spidermonkey
+
+h1(#appendixa). Appendix A - Deprecated Features
+
+None as yet, although 'preventEnumerate' will be deprecated shortly.
