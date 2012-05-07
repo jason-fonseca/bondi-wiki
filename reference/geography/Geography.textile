@@ -1,0 +1,35 @@
+h2(#summary). Summary
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+h2(#methods). Methods
+
+- CountryFromIP(ip address)
+- RangeFromIP(ip address)
+- ResolveFromIP(ip address) := Returns an Object instance with properties set, or null if no resolution was possible.
+
+h2(#object-instances). Object Instances
+
+h3(#object-properties). Properties
+
+- AreaCode
+- City
+- ContinentCode
+- CountryCode
+- CountryCode3
+- Latitude
+- Longitude
+- PostalCode
+- Region := =:
+
+h3(#object-methods). Methods
+
+h2(#examples). Examples
+
+h2(#seealso). See also

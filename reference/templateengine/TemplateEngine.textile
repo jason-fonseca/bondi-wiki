@@ -1,0 +1,31 @@
+h2(#summary). Summary
+
+Constructable object available in [[Bondi|Bondi Reference]]
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#object-instances). TemplateEngine Instances
+
+h3(#object-properties). Properties
+
+- DataSource
+- Input
+- QueryString
+- RootDirectory := =:
+
+h3(#object-methods). Methods
+
+- AddData()
+- AddDataset()
+- AddMacro()
+- AddProperty()
+- Execute()
+- ExecuteToString() := =:
+
+h2(#examples). Examples
+
+h2(#seealso). See also

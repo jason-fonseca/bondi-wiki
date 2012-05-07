@@ -1,0 +1,46 @@
+h2(#summary). Summary
+
+Constructable object in [[Bondi|Bondi Reference]]
+
+h2(#syntax). Syntax
+
+@var dbCmd = new DbCommand();@
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- Connection := Set the database connection to use, or retrieve the connection.
+- CommandText := Set the SQL command to use, or retrieve the command.
+- CommandTimeout := Not implemented.
+
+h2(#methods). Methods
+
+- Execute(args) := Executes command and returns a [[DbRecordset]] if there are results, passes args for positional params in CommandText.
+- ExecuteScalar(args) := Executes command and returns a single result, passes args for positional params in CommandText.
+- ExecuteStream(args) := Executes command and returns a stream of resulting data, passes args for positional params in CommandText.
+- ExecuteCallback(args, function) := Executes function for every row, passing in the Row, RowIndex and ResultSetIndex as arguments to function, takes args for positional params in CommandText.
+
+h2(#examples). Examples
+
+```javascript
+var dbConn = new DbConnection("sqlite:test.db");
+var dbCmd = new DbCommand();
+
+dbCmd.Connection = dbConn;
+dbCmd.CommandText = "SELECT * FROM table WHERE colA = ? and colB = ?";
+
+// Preparing a DbCommand allows reuse of the SQL command
+var colVals = [[1,1],[2,2],[3,3]];
+for (var idx = 0; idx < colVals.length; idx++)
+{
+	var dbResult = dbCmd.Execute(colVals[idx][0], colVals[idx][1]);
+	...
+}
+```
+
+h2(#seealso). See also
+
+* [[DbConnection]]
+* [[DbParameters]]
+* [[DbRecordset]]

@@ -1,1 +1,0 @@
-Takes a name - returns an array of objects that have exchanger and preference properties

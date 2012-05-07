@@ -1,0 +1,41 @@
+h2(#summary). Summary
+
+Instrinsic Request object available in [[Bondi|Bondi Reference]]
+
+The Request object also operates as a stream of bytes the represent any posted data. e.g. Response.BinaryWrite(Request) will reflect any input to the output byte for byte.
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- QueryString
+- Cookies
+- Form
+- ServerVariables
+- TotalBytes
+- Charset := Charset encoding of the Request.
+
+h2(#methods). Methods
+
+- BinaryRead() := =:
+
+h2(#object-instances). Object Instances
+
+h3(#object-properties). Properties
+
+h3(#object-methods). Methods
+
+h2(#examples). Examples
+
+```javascript
+for(var x in Request.ServerVariables)
+{
+	Response.Write(x + ": " + Request.ServerVariables[x]);
+}
+```
+
+h2(#seealso). See also

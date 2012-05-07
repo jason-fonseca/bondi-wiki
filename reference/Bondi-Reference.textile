@@ -1,0 +1,9 @@
+h1(#globalobjects). Global Objects
+
+Along with support for the standard objects provided in the "MDN Javascript Reference":https://developer.mozilla.org/en/JavaScript/Reference#Global_Objects Bondi provides additional intrinsic[1] and constructor objects.
+
+The full list of links to objects available can be found in the sidebar on the right.
+
+For information on how to get started, please visit our [[Bondi Guide]].
+
+fn1. These are objects that do not need to be instantiated with a 'new' call, they work similarly to the standard 'Math' library object for example.

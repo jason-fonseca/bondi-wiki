@@ -1,7 +1,0 @@
-h2. Examples
-
-@Response.Headers.Location = "http://www.ezimerchant.com/";@
-
-h2. See Also
-
-[[Response]]

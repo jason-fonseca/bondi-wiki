@@ -1,0 +1,92 @@
+h2(#summary). Summary
+
+Constructable object in [[Bondi|Bondi Reference]]
+
+h2(#syntax). Syntax
+
+```javascript
+var dbconn = new DbConnection("sqlite:test.db");
+var dbconn = new DbConnection("sqlite::memory:");
+var dbconn = new DbConnection("odbc:");
+```
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- EvalContext
+- Identity (read-only) := Returns the identity value on the most recent command execution, if it applies.
+- ReadOnly := Either "true" or "false".
+- RowsAffected (read-only)
+- Tables (read-only) :=
+
+=:
+
+h2(#methods). Methods
+
+- BeginTrans() := Starts a database transaction.
+- CommitTrans() := Commits current transaction.
+- RollbackTrans() := Rolls back current transaction.
+- Execute(command, args) := Executes command and returns a [[DbRecordset]] if there are results, passes args for positional params in command.
+- ExecuteScalar(command, args) := Executes command and returns a single result, passes args for positional params in command.
+- ExecuteStream(command, args) := Executes command and returns a stream of resulting data, passes args for positional params in command.
+- ExecuteCallback(command, args, function) := Executes function for every row, passing in the Row, RowIndex and ResultSetIndex as arguments to function, takes args for positional params in command.
+- Close() := Closes the DbConnection.
+
+h2(#examples). Examples
+
+```javascript
+var dbConn = new DbConnection("sqlite::memory:");
+
+var result = dbConn.ExecuteScalar("SELECT 1 + 1;");
+dbConn.BeginTrans();
+dbConn.Execute("CREATE TABLE IF NOT EXISTS testycool ( id INTEGER NOT NULL AUTOINCREMENT)");
+dbConn.CommitTrans();
+```
+
+h2(#seealso). See also
+
+* [[DbCommand]]
+* [[DbParameters]]
+* [[DbRecordset]]
+
+h2(#legacy). Legacy Notes
+
+h3. Dbconnection.mediawiki
+
+ExecuteScalar returns an atomic value<br>
+(3:49:30 PM) Ezi-Merch (luke): Execute returns a result set (an array like object)<br>
+(3:49:43 PM) Ezi-Merch (luke): ExecuteStream returns an object that behaves like a stream<br>
+(3:50:03 PM) Ezi-Merch (luke): so you can do Response.BinaryWrite(Db.ExecuteStream(...<br>
+(3:50:12 PM) Ezi-Merch (luke): to serve images from a db<br>
+(3:50:23 PM) Ezi-Merch (luke): and ExecuteCallback is the last<br>
+(3:50:26 PM) Ezi-Merch (luke): it returns nothing<br>
+(3:50:33 PM) Ezi-Merch (luke): 0but you pass it a lambda (anon fn<br>
+(3:50:43 PM) Ezi-Merch (luke): and it executes the function for every row<br>
+
+h3. DbParameters.textile
+
+h4. Properties
+
+* Boolean
+* Char
+* VarChar
+* WChar
+* WVarChar
+* LongVarChar
+* LongWVarChar
+* Currency
+* Date
+* GUID
+* TinyInt
+* SmallInt
+* Int
+* BigInt
+* Binary
+* VarBinary
+* LongVarBinary
+* Decimal
+* Single
+* Double

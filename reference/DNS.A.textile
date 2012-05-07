@@ -1,1 +1,0 @@
-Takes a name - returns an ip address (as a string)

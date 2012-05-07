@@ -1,0 +1,54 @@
+h2(#summary). Summary
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- Overwrite := Is either "true" or "false", can be changed.
+- Recursive := Is either "true" or "false", can be changed.
+
+h2(#methods). Methods
+
+- Open(filename, mode) := Open given file in given mode.
+- OpenTemporaryFile(initial path, mode - binary, text) := Open temporary file, will be deleted once closed from file system.
+- Rename(filename, new filename, flags)
+- Copy(src, target, flags)
+- Delete(filename, flags)
+- Exists(filename)
+- IsFile(filename)
+- IsDirectory(filename)
+- IsReadable(filename) := Not Implemented
+- IsWriteable(filename) := Not Implemented
+- IsExecutable(filename) := Not Implemented
+- Stat(filename) := Not Implemented
+- MimeType(filename) := Not Implemented
+
+h2(#object-instances). File Instances
+
+An instance of File is created when using the File.Open() or File.OpenTemporaryFile() methods.
+
+h3(#object-properties). Properties
+
+- Name (read-only)
+- Closed (read-only)
+- Mode (read-only)
+- Type (read-only) := Is either "file" or "directory"
+
+h3(#object-methods). Methods
+
+- Read(size) := Read data from file up to given size
+- ReadLine(size) := Read line of data from file up to given size
+- ReadLines(sizehint) := Read lines of data from file taking into consideration the size hint
+- Seek(offset, whence)
+- Write(str)
+- WriteLines(sequence)
+- Truncate(size)
+- Close()
+
+h2(#examples). Examples
+
+h2(#seealso). See also

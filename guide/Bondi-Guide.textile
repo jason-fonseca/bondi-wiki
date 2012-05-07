@@ -1,0 +1,52 @@
+(This page is a work in progress and is due for a revamp shortly)
+
+h1. Object Model
+
+h2. Intrinsic Objects (no need to instantiate)
+
+[[Application]]
+[[Request]]
+[[Response]]
+[[Server]]
+[[File]]
+[[DNS]]
+[[DbParameters]]
+[[Crypto]]
+[[Base64]]
+[[UUID]]
+[[Geography]]
+[[WhoIs]]
+
+[[Queue]]
+
+h2. Constructable Objects
+
+[[FastCGIClient]]
+[[HttpClient]]
+[[FtpClient]]
+[[UrlClient]]
+[[DbConnection]]
+[[DbCommand]]
+[[MailMessage]]
+[[TemplateEngine]]
+[[Image]]
+
+h2. Command Line
+
+* -script
+* -xsendfile
+* -approot
+* -memlimit
+
+h2. Environment
+
+These environment vars need to be included within the spawn-bondi.sh script on linux to ensure they're allowed in the bondi fcgi environment. All other environment variables are wiped.
+* BONDI_SCRIPT
+* BONDI_STARTSCRIPT
+* BONDI_XSENDFILE
+* BONDI_XREWRITE
+* BONDI_APPROOT
+* BONDI_MEMLIMIT - NOTE: not yet implemented
+* BONDI_GEOIPDB - path to maxmind city database
+* BONDI_MAIL - semi colon delimited lists of mail server host:port form, mail drop path or mail command
+* BONDI_SCRIPTCACHE - set to "off" to inhibit script caching

@@ -77,3 +77,45 @@ In a spare moment assess "v8":http://code.google.com/p/v8/ over Spidermonkey
 h1(#appendixa). Appendix A - Deprecated Features
 
 None as yet, although 'preventEnumerate' will be deprecated shortly.
+
+h1. Object Reference Template
+
+h2. Sidebar
+
+"Summary":#summary
+"Syntax":#syntax
+"Parameters":#parameters
+"Description":#description
+"Properties":#properties
+"Methods":#methods
+"Object Instances":#object-instances
+- "Properties":#object-properties
+- "Methods":#object-methods
+"Examples":#examples
+"See also":#seealso
+
+[[Home]]
+[[Bondi Reference]]
+[[Bondi Guide]]
+
+h2(#summary). Summary
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+h2(#methods). Methods
+
+h2(#object-instances). Object Instances
+
+h3(#object-properties). Properties
+
+h3(#object-methods). Methods
+
+h2(#examples). Examples
+
+h2(#seealso). See also

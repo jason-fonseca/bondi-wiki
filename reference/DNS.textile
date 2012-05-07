@@ -1,7 +1,0 @@
-h2. Methods
-
-* [[DNS.A]]
-* [[DNS.MX]]
-* [[DNS.TXT]]
-* [[DNS.NS]]
-* [[DNS.SOA]]

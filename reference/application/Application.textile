@@ -1,0 +1,31 @@
+h2(#summary). Summary
+
+Instrinsic object available in [[Bondi|Bondi Reference]]
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- ProcessId (read-only) := The process id (or pid) of the running bondi instance.
+- ProcessName := The process name of the running bondi instance, can be changed.
+
+All environment variables available at process startup are present as properties on the Application object.
+
+Additionally, you can add properties here that will persist beyond page execution.
+
+h2(#examples). Examples
+
+```javascript
+// Grab the process id and name
+var pid = Application.ProcessId;
+var pname = Application.ProcessName;
+
+// Change the process name to something else, this will be reflected in the external OS environment
+Application.ProcessName = "supercoolprocessname";
+
+// List of all properties as well as environment variables and values
+for (var x in Application)
+{
+	Response.Write("Application['" + x + "']: " + Application[x]);
+}
+```

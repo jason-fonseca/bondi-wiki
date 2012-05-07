@@ -1,0 +1,79 @@
+h2(#summary). Summary
+
+Intrinsic Response object available in [[Bondi|Bondi Reference]]
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- Headers
+- Cookies
+- ContentType
+- Charset
+- Expires
+- Status
+- Buffer := =:
+
+h2(#methods). Methods
+
+- Write()
+- BinaryWrite()
+- Flush()
+- Clear()
+- SendFile()
+- Rewrite()
+- End() := =:
+
+h2(#object-instances). Response Instances
+
+h3(#object-properties). Properties
+
+Objects in Response.Cookies[1] have the following properties:
+
+- Value
+- Expires
+- Domain
+- Path
+- Secure
+- HttpOnly
+- Comment
+- Version := =:
+
+fn1.
+As cookie values are assigned they are replaced by an internal cookie object and the cookie value is placed onto the internal cookie object value.
+
+h3(#object-methods). Methods
+
+- Response.Cookies.Encrypt(property, key, string) := Assign a property to the Response.Cookies object that has its value encrypted.
+- Response.Cookies.Decrypt()
+
+h2(#examples). Examples
+
+h3. Response.Cookies
+
+```javascript
+Response.Cookies.Test = "Hello World";
+Response.Cookies.Test.Expires = (new Date(Date.parse(Date()) + 5000)).toGMTstring();
+Response.Cookies.Test.Secure = true;
+Response.Cookies.Test.HttpOnly = true;
+
+Response.Cookies.Encrypt(Test2, {Key: 'Key', Algorithm: 'BLOWFISH', Hash: 'SHA1'}, 'Hello World');
+Response.Cookies.Encrypt(Test3, {Key: 'Key2', Algorithm: 'AES', Hash: 'MD5'}, Test);
+
+// To see the values
+Response.Write("Response.Cookies.Test =" + Response.Cookies.Test);
+Response.Write("Response.Cookies.Test2 = " + Response.Cookies.Test2);
+Response.Write("Response.Cookies.Test3 = " + Response.Cookies.Test3);
+```
+
+h3. Response.Headers
+
+```javascript
+Response.Headers.Location = "http://www.ezimerchant.com/";
+```
+
+h2(#seealso). See also

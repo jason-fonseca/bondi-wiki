@@ -1,9 +1,0 @@
-h2. Application
-
-Instrinsic object available in [[ bondi]]
-
-h2. Properties
-
-All environment variables available at process startup are present as properties on the Application object
-
-Additionally, you can add properties here that will persist beyond page execution.

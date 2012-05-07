@@ -1,0 +1,35 @@
+h2(#summary). Summary
+
+h2(#syntax). Syntax
+
+h2(#parameters). Parameters
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+h2(#methods). Methods
+
+- A := Takes a name - returns an ip address (as a string)
+- MX := Takes a name - returns an array of objects that have exchanger and preference properties
+- TXT := Takes a name - returns the txt data against the record in the dns
+- NS := Takes a name - returns the NS record
+- SOA := Takes a name - returns an SOA record
+
+h2(#object-instances). Object Instances
+
+h3(#object-properties). Properties
+
+h3(#object-methods). Methods
+
+h2(#examples). Examples
+
+```javascript
+var ip = DNS.A("www.google.com");
+var mxRecords = DNS.MX("www.google.com");
+var txt = DNS.TXT("www.google.com");
+var ns = DNS.NS("www.google.com");
+var soa = DNS.SOA("www.google.com");
+```
+
+h2(#seealso). See also
