@@ -1,0 +1,63 @@
+h2(#summary). Summary
+
+Returned from Execute calls on [[DbConnection]] and [[DbCommand]].
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- Columns := Array of column objects from returned database records, that each have "Properties":#columns-properties and "Methods":#columns-methods.
+- length := Helper property, matches the RecordCount value, enables the DbRecordset to be treated as an array.
+- NextRecordset := Contains the next [[DbRecordset]] if available.
+- RecordCount := Returns the number of records in the set returned from the database query.
+
+The DbRecordset itself can be accessed in the same fashion as you would an array, by checking the RecordCount or length property you can traverse through the elements to access row data using the Columns Name property for field designation.
+
+h3(#columns-properties). Column Properties
+
+- length :=
+
+=:
+- Name
+- Type
+
+h2(#methods). Methods
+
+- toJSON() :=
+
+=:
+- toSource()
+
+h3(#columns-methods). Column Methods
+
+- toString() :=
+
+=:
+- valueOf()
+
+h2(#examples). Examples
+
+```javascript
+Response.Write("Creating database in memory\n");
+var dbConn = new DbConnection("sqlite::memory:");
+var dbCmd = new DbCommand();
+
+dbConn.Execute("CREATE TABLE IF NOT EXISTS example ( \
+id INTEGER PRIMARY KEY AUTOINCREMENT,\
+data TEXT NOT NULL\
+)");
+
+Response.Write("Inserting some random data\n")
+dbCmd.Connection = dbConn;
+dbCmd.CommandText = "INSERT INTO example (data) VALUES (?)";
+
+for (var i = 0; i < 10; i++)
+{
+        dbConn.Execute("INSERT INTO example (data) VALUES (?)", Base64.Encode(Crypto.Hash(Crypto.MD5, i)));
+        dbCmd.Execute(Base64.Encode(Crypto.Hash(Crypto.MD5, i)));
+}
+
+dbConn.Close();
+```
+
+h2(#seealso). See also
