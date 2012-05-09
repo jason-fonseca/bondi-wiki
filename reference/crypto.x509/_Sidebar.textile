@@ -1,6 +1,5 @@
 "Summary":#summary
 "Description":#description
-"Properties":#properties
 "Methods":#methods
 "Examples":#examples
 "See also":#seealso

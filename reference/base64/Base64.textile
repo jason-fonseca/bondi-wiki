@@ -19,4 +19,4 @@ var strDecoded = Base64.Decode("aGVsbG8gd29ybGQ=");
 h2(#seealso). See also
 
 * [[Crypto]]
-* [[CryptoKey]]
+* [[Crypto.X509]]
