@@ -1,0 +1,38 @@
+h2(#summary). Summary
+
+Instrinsic object in [[Bondi|Bondi Reference]]
+
+h2(#description). Description
+
+h2(#properties). Properties
+
+- BigInt :=
+
+=:
+- Binary
+- Boolean
+- Char
+- Currency
+- Date
+- Decimal
+- Double
+- GUID
+- Int
+- LongVarBinary
+- LongVarChar
+- LongWVarChar
+- Single
+- SmallInt
+- TinyInt
+- VarBinary
+- VarChar
+- WChar
+- WVarChar
+
+h2(#examples). Examples
+
+h2(#seealso). See also
+
+* [[DbConnection]]
+* [[DbCommand]]
+* [[DbRecordset]]

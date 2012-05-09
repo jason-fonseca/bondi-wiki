@@ -1,8 +1,6 @@
 "Summary":#summary
-"Syntax":#syntax
 "Description":#description
 "Properties":#properties
-"Methods":#methods
 "Examples":#examples
 "See also":#seealso
 
