@@ -1,20 +1,41 @@
 h2(#summary). Summary
 
+Constructable object available in [[Bondi|Bondi Reference]]
+
 h2(#syntax). Syntax
 
+@var sftpClient = new SFtpClient([host [, username [, password]]]);@
+
 h2(#parameters). Parameters
+
+- host := The sftp hostname or ip address to connect to.
+- username := The username to login with on the host.
+- password := The password for the username to login with.
 
 h2(#description). Description
 
 h2(#properties). Properties
 
+- ConnectTimeout :=
+
+=:
+- HomeDirectory
+- Host
+- Password
+- ReceiveTimeout
+- SendTimeout
+- Username
+
 h2(#methods). Methods
 
-h2(#object-instances). Object Instances
+- Close() :=
 
-h3(#object-properties). Properties
-
-h3(#object-methods). Methods
+=:
+- Delete()
+- Get()
+- Move()
+- Permissions()
+- Put()
 
 h2(#examples). Examples
 
