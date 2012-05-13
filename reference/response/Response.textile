@@ -1,55 +1,31 @@
 h2(#summary). Summary
 
-Intrinsic Response object available in [[Bondi|Bondi Reference]]
-
-h2(#syntax). Syntax
-
-h2(#parameters). Parameters
+Intrinsic object available in [[Bondi|Bondi Reference]]
 
 h2(#description). Description
 
 h2(#properties). Properties
 
-- Headers
-- Cookies
-- ContentType
-- Charset
-- Expires
-- Status
-- Buffer := =:
+- Buffer := Get and set response buffering true or false (on or off).
+- Charset := Get and set response charset.
+- Compress := Get and set compression true or false (on or off).
+- ContentType := Get and set content-type header.
+- Cookies := Get and set cookies. Cookie objects can have the following properties: Comment, Domain, Expires, HttpOnly, Path, Port, Secure, Value, Version
+- Expires := Get and set expires header.
+- Headers := Get and set response headers.
+- Limit := Get and set the output buffer limit.
+- Status := Get and set response status.
 
 h2(#methods). Methods
 
-- Write()
-- BinaryWrite()
-- Flush()
-- Clear()
-- SendFile()
-- Rewrite()
-- End() := =:
-
-h2(#object-instances). Response Instances
-
-h3(#object-properties). Properties
-
-Objects in Response.Cookies[1] have the following properties:
-
-- Value
-- Expires
-- Domain
-- Path
-- Secure
-- HttpOnly
-- Comment
-- Version := =:
-
-fn1.
-As cookie values are assigned they are replaced by an internal cookie object and the cookie value is placed onto the internal cookie object value.
-
-h3(#object-methods). Methods
-
-- Response.Cookies.Encrypt(property, key, string) := Assign a property to the Response.Cookies object that has its value encrypted.
-- Response.Cookies.Decrypt()
+- BinaryWrite(stream or ...) := Will write binary data from a stream to the client, or will write out binary data from one or more arguments until a null argument is encountered or there are no more arguments provided.
+- Clear() := Clears pending output data if it hasn't been sent (ie in the buffered output case).
+- Cookies.Encrypt(cookie, key, value) := Assign a property to the Response.Cookies object that has its value encrypted.
+- End() := Finish the response and clear up resources.
+- Flush() := Forces data to be sent to client immediately.
+- Rewrite(url) := Spins off the response to url, rewriting the URI sections to the new url.
+- SendFile(filename) := Returns X-Sendfile header to web server so that it can handle the file response after first checking approot permissions.
+- Write(...) := Will write out data from one or more arguments until a null argument is encountered or there are no more arguments provided.
 
 h2(#examples). Examples
 

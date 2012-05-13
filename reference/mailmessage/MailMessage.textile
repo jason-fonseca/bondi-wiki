@@ -16,7 +16,7 @@ h2(#methods). Methods
 
 - Send(from, to, subject, message) := Convenience method to send email, the to argument can be passed in as an array of email address strings.
 
-h2(#object-instances). Object Instances
+h2(#object-instances). MailMessage Instances
 
 h3(#object-properties). Properties
 
