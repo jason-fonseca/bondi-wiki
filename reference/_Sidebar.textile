@@ -8,6 +8,7 @@
 - [[DbParameters]]
 - [[DbRecordset]]
 - [[Debug]]
+- [[Dir]]
 - [[DNS]]
 - [[FastCGIClient]]
 - [[File]]

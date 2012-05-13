@@ -1,0 +1,21 @@
+h2(#summary). Summary
+
+Intrinsic object available in [[Bondi|Bondi Reference]]
+
+h2(#description). Description
+
+h2(#methods). Methods
+
+- Listing(filepath [, glob flags]) := Takes a filepath and optional glob flags, returns an array of listing objects with properties: Directory (boolean flag), Name and Path.
+
+h2(#examples). Examples
+
+```javascript
+var currentDirListing = Dir.Listing(".");
+
+Response.Write(currentDirListing.toSource() + "\n");
+```
+
+h2(#seealso). See also
+
+* [[File]]

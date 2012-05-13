@@ -1,5 +1,7 @@
 h2(#summary). Summary
 
+Intrinsic object available in [[Bondi|Bondi Reference]]
+
 h2(#syntax). Syntax
 
 h2(#parameters). Parameters
