@@ -8,7 +8,7 @@ h2(#syntax). Syntax
 
 h2(#parameters). Parameters
 
-- stream := A Bondi stream object (eg. from File, HttpClient, FtpClient etc).
+- stream := A Bondi stream object (eg. from File, HttpClient, FtpClient etc) containing html data.
 - string := A string containing html text.
 
 h2(#description). Description
