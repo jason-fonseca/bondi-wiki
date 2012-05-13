@@ -10,24 +10,48 @@ h2(#description). Description
 
 h2(#properties). Properties
 
-- Overwrite := Is either "true" or "false", can be changed.
-- Recursive := Is either "true" or "false", can be changed.
+- Overwrite (read-only) := Bit flag.
+- Recursive (read-only) := Bit flag.
 
 h2(#methods). Methods
 
-- Open(filename, mode) := Open given file in given mode.
-- OpenTemporaryFile(initial path, mode - binary, text) := Open temporary file, will be deleted once closed from file system.
-- Rename(filename, new filename, flags)
-- Copy(src, target, flags)
-- Delete(filename, flags)
-- Exists(filename)
-- IsFile(filename)
-- IsDirectory(filename)
-- IsReadable(filename) := Not Implemented
-- IsWriteable(filename) := Not Implemented
-- IsExecutable(filename) := Not Implemented
-- Stat(filename) := Not Implemented
+- Copy(source, destination [, flags]) := Copy source  to destination with optional flags. Throws exceptions on failure, doesn't return any value.
+- Compare(filename, filename [, flag]) := Takes two filename arguments and an optional recursive flag, returns true if the files at those locations match, false otherwise.
+- Delete(filename [, flags]) := Takes filename as argument and optional flags, attempts to delete given files. Returns true on successful deletion, false otherwise.
+- Exists(filename) := Takes a filename argument, checks to see if file exists, returns true if it does, false otherwise.
+- FileType() := Not Implemented.
+- IsDirectory(filename) := Takes a filename argument, returns true if filename exists and is a directory, false otherwise.
+- IsExecutable(filename) := Not Implemented.
+- IsFile(filename) := Takes a filename argument, returns true if filename exists and is a regular file, false otherwise.
+- IsReadable(filename) := Not Implemented.
+- IsWriteable(filename) := Not Implemented.
+- MakeDirectory(filepath) := Takes a filepath argument, attempts to create directories to match filepath if they don't exist. Throws exceptions on failure, doesn't return any value.
 - MimeType(filename) := Not Implemented
+- Open(filename [, mode [, encoding]]) :=
+
+Open given file with optional mode (mode defaults to "r" ie. read-only) and optional encoding (encoding doesn't apply in binary modes).
+
+Mode can be any of the following:
+
+* "r" or "rt" - Open existing file in read-only text mode.
+* "rb" - Open existing file in read-only binary mode.
+* "r+", "rt+" or "r+t" - Open existing file in read-write text mode.
+* "rb+" or "r+b" - Open existing file in read-write binary mode.
+* "w" or "wt" - Open new file in write-only text mode.
+* "wb" - Open new file in write-only binary mode.
+* "w+", "wt+" or "w+t" - Open new file in read-write text mode.
+* "wb+" or "w+b" - Open new file in read-write binary mode.
+* "a" or "at" - Open new or existing file in write-only text mode, appending if existing file.
+* "ab" - Open new or existing file in write-only binary mode, appending if existing file.
+* "a+", "at+" or "a+t" - Open new or existing file in read-write text mode, appending if existing file.
+* "ab+" or "a+b" - Open new or existing file in read-write binary mode, appending if existing file.
+
+Encoding should most likely be any of those supported by "iconv":http://www.gnu.org/software/libiconv/ since Bondi makes use of the library.
+
+=:
+- OpenTemporaryFile(fileprefix [, mode]) := Open temporary file with optional mode, will be deleted once closed from file system, returns a file stream object with property: FileName.
+- Rename(filename, filename [, flags]) := Takes two filename arguments and optional flags, attempts to rename the first filename to the second. Throws exceptions on failure, doesn't return any value.
+- Stat(filename) := Takes a filename argument, if filename exists, returns a file stat object with properties: Id, AccessTime, CreateTime, ModifiedTime, Size.
 
 h2(#object-instances). File Instances
 
@@ -35,22 +59,27 @@ An instance of File is created when using the File.Open() or File.OpenTemporaryF
 
 h3(#object-properties). Properties
 
-- Name (read-only)
 - Closed (read-only)
 - Mode (read-only)
+- Name (read-only)
 - Type (read-only) := Is either "file" or "directory"
 
 h3(#object-methods). Methods
 
-- Read(size) := Read data from file up to given size
-- ReadLine(size) := Read line of data from file up to given size
-- ReadLines(sizehint) := Read lines of data from file taking into consideration the size hint
+- Close() := Closes file stream.
+- Read(size) := Read data from file up to given size.
+- ReadLine(size) := Read line of data from file up to given size.
+- ReadLines(sizehint) := Read lines of data from file taking into consideration the size hint.
 - Seek(offset, whence)
+- Truncate(size)
 - Write(str)
 - WriteLines(sequence)
-- Truncate(size)
-- Close()
 
 h2(#examples). Examples
 
+```javascript
+```
+
 h2(#seealso). See also
+
+* [[Dir]]

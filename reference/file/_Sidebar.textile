@@ -1,6 +1,4 @@
 "Summary":#summary
-"Syntax":#syntax
-"Parameters":#parameters
 "Description":#description
 "Properties":#properties
 "Methods":#methods
