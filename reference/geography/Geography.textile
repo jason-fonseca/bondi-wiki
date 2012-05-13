@@ -1,34 +1,14 @@
 h2(#summary). Summary
 
-h2(#syntax). Syntax
-
-h2(#parameters). Parameters
+Instrinsic object available in [[Bondi|Bondi Reference]]
 
 h2(#description). Description
 
-h2(#properties). Properties
-
 h2(#methods). Methods
 
-- CountryFromIP(ip address)
-- RangeFromIP(ip address)
-- ResolveFromIP(ip address) := Returns an Object instance with properties set, or null if no resolution was possible.
-
-h2(#object-instances). Object Instances
-
-h3(#object-properties). Properties
-
-- AreaCode
-- City
-- ContinentCode
-- CountryCode
-- CountryCode3
-- Latitude
-- Longitude
-- PostalCode
-- Region := =:
-
-h3(#object-methods). Methods
+- CountryFromIP(ip address) := Returns null if resolution of ip wasn't possible or the "country code":http://www.maxmind.com/app/iso3166 for given ip address.
+- RangeFromIP(ip address) := Returns null if resolution of ip wasn't possible or a range object with properties: Start, End.
+- ResolveFromIP(ip address) := Returns null if resolution of ip wasn't possible or a geography object with properties: CountryCode, CountryCode3, Region, City, ContinentCode, PostalCode, Longitude, Latitude.
 
 h2(#examples). Examples
 
