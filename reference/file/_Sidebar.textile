@@ -2,7 +2,7 @@
 "Description":#description
 "Properties":#properties
 "Methods":#methods
-"Object Instances":#object-instances
+"File Instances":#object-instances
 - "Properties":#object-properties
 - "Methods":#object-methods
 "Examples":#examples
