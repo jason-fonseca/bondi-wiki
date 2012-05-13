@@ -14,7 +14,7 @@
 - [[File]]
 - [[FtpClient]]
 - [[Geography]]
-- [[Html]]
+- [[HTMLDocument]]
 - [[HttpClient]]
 - [[Image]]
 - [[ImapClient]]

@@ -3,10 +3,6 @@
 "Parameters":#parameters
 "Description":#description
 "Properties":#properties
-"Methods":#methods
-"Object Instances":#object-instances
-- "Properties":#object-properties
-- "Methods":#object-methods
 "Examples":#examples
 "See also":#seealso
 
