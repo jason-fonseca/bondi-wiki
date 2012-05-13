@@ -5,7 +5,7 @@
 - [[Crypto.X509]]
 - [[DbCommand]]
 - [[DbConnection]]
-- [[DbParameter]]
+- [[DbParameters]]
 - [[DbRecordset]]
 - [[Debug]]
 - [[DNS]]

@@ -29,13 +29,13 @@ h2(#properties). Properties
 h2(#methods). Methods
 
 - BeginTrans() := Starts a database transaction.
+- Close() := Closes the DbConnection.
 - CommitTrans() := Commits current transaction.
-- RollbackTrans() := Rolls back current transaction.
 - Execute(command, args) := Executes command and returns a [[DbRecordset]] if there are results, passes args for positional params in command.
+- ExecuteCallback(command, args, function) := Executes function for every row, passing in the Row, RowIndex and ResultSetIndex as arguments to function, takes args for positional params in command.
 - ExecuteScalar(command, args) := Executes command and returns a single result, passes args for positional params in command.
 - ExecuteStream(command, args) := Executes command and returns a stream of resulting data, passes args for positional params in command.
-- ExecuteCallback(command, args, function) := Executes function for every row, passing in the Row, RowIndex and ResultSetIndex as arguments to function, takes args for positional params in command.
-- Close() := Closes the DbConnection.
+- RollbackTrans() := Rolls back current transaction.
 
 h2(#examples). Examples
 

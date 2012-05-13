@@ -6,14 +6,14 @@ h2(#description). Description
 
 h2(#methods). Methods
 
-- Encode(string) := Base64 encode a given string.
 - Decode(string) := Base64 decode a given string.
+- Encode(string) := Base64 encode a given string.
 
 h2(#examples). Examples
 
 ```javascript
-var strEncoded = Base64.Encode("hello world");
 var strDecoded = Base64.Decode("aGVsbG8gd29ybGQ=");
+var strEncoded = Base64.Encode("hello world");
 ```
 
 h2(#seealso). See also
