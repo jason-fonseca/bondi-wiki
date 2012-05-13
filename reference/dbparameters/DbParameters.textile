@@ -33,6 +33,6 @@ h2(#examples). Examples
 
 h2(#seealso). See also
 
-* [[DbConnection]]
 * [[DbCommand]]
+* [[DbConnection]]
 * [[DbRecordset]]

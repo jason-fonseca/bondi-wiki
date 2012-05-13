@@ -1,21 +1,45 @@
 h2(#summary). Summary
 
-h2(#syntax). Syntax
-
-h2(#parameters). Parameters
+Instrinsic object available in [[Bondi|Bondi Reference]]
 
 h2(#description). Description
 
-h2(#properties). Properties
-
 h2(#methods). Methods
 
-h2(#object-instances). Object Instances
-
-h3(#object-properties). Properties
-
-h3(#object-methods). Methods
+- LogCrit([message]) := Will record an optional message to the debug log with critical rating, on linux this will generally be the syslog.
+- LogInfo([message]) := Works the same way as LogCrit, except with info rating.
+- LogWarn([message]) := Works the same way as LogCrit, except with warn rating.
+- BackTrace() := This method will return an array of stack frame objects representing the call stack at that time, each having the following properties: FunctionName, LineNumber, ScriptFileName
 
 h2(#examples). Examples
+
+```javascript
+Debug.LogInfo("Logging a message at info rating in debug log");
+Debug.LogCrit(); // No argument still causes a line to drop to debug log with no message.
+
+
+function func1() {
+    func2();
+}
+
+function func2() {
+    func3();
+}
+
+function func3() {
+    var backtrace = Debug.BackTrace();
+    
+    Response.Write("BackTrace:\n");
+    for (var idx in backtrace)
+    {
+        Response.Write("ScriptFileName: " + backtrace[idx].ScriptFileName
+                        + ", LineNumber: " + backtrace[idx].LineNumber
+                        + ", FunctionName: " + backtrace[idx].FunctionName
+                        + "\n");
+    }
+}
+
+func1();
+```
 
 h2(#seealso). See also

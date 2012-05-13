@@ -38,26 +38,36 @@ h3(#columns-methods). Column Methods
 h2(#examples). Examples
 
 ```javascript
-Response.Write("Creating database in memory\n");
 var dbConn = new DbConnection("sqlite::memory:");
 var dbCmd = new DbCommand();
 
-dbConn.Execute("CREATE TABLE IF NOT EXISTS example ( \
-id INTEGER PRIMARY KEY AUTOINCREMENT,\
-data TEXT NOT NULL\
-)");
+dbConn.Execute("\
+    CREATE TABLE IF NOT EXISTS example (\
+    id INTEGER PRIMARY KEY AUTOINCREMENT,\
+    data TEXT NOT NULL)");
 
-Response.Write("Inserting some random data\n")
 dbCmd.Connection = dbConn;
 dbCmd.CommandText = "INSERT INTO example (data) VALUES (?)";
 
 for (var i = 0; i < 10; i++)
 {
-        dbConn.Execute("INSERT INTO example (data) VALUES (?)", Base64.Encode(Crypto.Hash(Crypto.MD5, i)));
-        dbCmd.Execute(Base64.Encode(Crypto.Hash(Crypto.MD5, i)));
+        dbCmd.Parameters = [{
+                                "Type": DbParameters.WVarChar,
+                                "Value": Base64.Encode(Crypto.Hash(Crypto.MD5, i))
+                            }];
+        dbCmd.Execute();
 }
 
+var dbResults = dbConn.Execute("SELECT * FROM example");
+for (var idx in dbResults)
+{
+    Response.Write(dbResults[idx].toSource() + "\n");
+}
 dbConn.Close();
 ```
 
 h2(#seealso). See also
+
+* [[DbCommand]]
+* [[DbConnection]]
+* [[DbParameters]]
