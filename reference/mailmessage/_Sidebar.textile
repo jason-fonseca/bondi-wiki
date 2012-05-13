@@ -2,9 +2,8 @@
 "Syntax":#syntax
 "Parameters":#parameters
 "Description":#description
-"Properties":#properties
 "Methods":#methods
-"Object Instances":#object-instances
+"MailMessage Instances":#object-instances
 - "Properties":#object-properties
 - "Methods":#object-methods
 "Examples":#examples

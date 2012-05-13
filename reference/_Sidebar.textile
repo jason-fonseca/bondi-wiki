@@ -18,7 +18,7 @@
 - [[HttpClient]]
 - [[Image]]
 - [[ImapClient]]
-- [[Mail]]
+- [[MailMessage]]
 - [[Pop3Client]]
 - [[Request]]
 - [[Response]]
