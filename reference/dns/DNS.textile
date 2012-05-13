@@ -1,35 +1,34 @@
 h2(#summary). Summary
 
-h2(#syntax). Syntax
-
-h2(#parameters). Parameters
+Instrinsic object available in [[Bondi|Bondi Reference]]
 
 h2(#description). Description
 
 h2(#properties). Properties
 
+- BYPASSCACHE (read-only) := Always set to true at this stage.
+
 h2(#methods). Methods
 
-- A := Takes a name - returns an ip address (as a string)
-- MX := Takes a name - returns an array of objects that have exchanger and preference properties
-- TXT := Takes a name - returns the txt data against the record in the dns
-- NS := Takes a name - returns the NS record
-- SOA := Takes a name - returns an SOA record
-
-h2(#object-instances). Object Instances
-
-h3(#object-properties). Properties
-
-h3(#object-methods). Methods
+- A(hostname [, flags]) := Takes a hostname and optionally dns flags, returns null if hostname can't be resolved or an ip address (as a string).
+- MX(hostname [, flags]) := Takes a hostname and optionally dns flags, returns null if hostname can't be resolved or an array of MX records that have properties Exchanger and Preference.
+- NS(hostname [, flags]) := Takes a hostname, returns null if hostname can't be resolved or returns an array of string NS records.
+- TXT(hostname [, flags]) := Takes a hostname, returns null if hostname can't be resolved or an array of string TXT records.
 
 h2(#examples). Examples
 
 ```javascript
-var ip = DNS.A("www.google.com");
+var ipAddress = DNS.A("www.google.com");
+Response.Write("IP: " + ipAddress);
+
 var mxRecords = DNS.MX("www.google.com");
-var txt = DNS.TXT("www.google.com");
-var ns = DNS.NS("www.google.com");
-var soa = DNS.SOA("www.google.com");
+Response.Write("MX: " + mxRecords.toSource() + "\n");
+
+var nsRecords = DNS.NS("www.google.com");
+Response.Write("NS: " + nsRecords.toSource() + "\n");
+
+var txtRecords = DNS.TXT("www.google.com");
+Response.Write("TXT: " + txtRecords.toSource() + "\n");
 ```
 
 h2(#seealso). See also
