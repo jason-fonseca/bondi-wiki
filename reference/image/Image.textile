@@ -37,7 +37,7 @@ h2(#object-instances). Image Instances
 
 h3(#object-properties). Properties
 
-- Format := Get and set the image format.
+- Format := Get and set the image format. Can be used to convert image between image types. (see examples)
 - Height (read-only) := Get the image height.
 - Type := Get and set the image type.
 - Width (read-only) := Get the image width.
@@ -53,5 +53,17 @@ h3(#object-methods). Methods
 - Resize(width, height) := Similar to fit, but will not maintain aspect ratio, takes two integer arguments detailing the new width and height, the image will then be resized using Lanczos filter method. Throws exceptions on failure, does not return any value.
 
 h2(#examples). Examples
+
+h3. Convert Image between formats
+
+@
+#!/home/dev/bin/bondi
+var img = new Image("test.jpg");
+img.Format = "PNG24";
+var f = File.Open("test.png", "wb");
+f.Write(img);
+f.Close();
+@
+
 
 h2(#seealso). See also
