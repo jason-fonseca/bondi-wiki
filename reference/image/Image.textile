@@ -56,8 +56,7 @@ h2(#examples). Examples
 
 h3. Convert Image between formats
 
-<pre><code>
-#!/home/dev/bin/bondi
+<pre><code>#!/home/dev/bin/bondi
 var img = new Image("test.jpg");
 img.Format = "PNG24";
 var f = File.Open("test.png", "wb");
