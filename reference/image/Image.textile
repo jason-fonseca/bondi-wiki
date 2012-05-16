@@ -56,14 +56,12 @@ h2(#examples). Examples
 
 h3. Convert Image between formats
 
-@
 #!/home/dev/bin/bondi
 var img = new Image("test.jpg");
 img.Format = "PNG24";
 var f = File.Open("test.png", "wb");
 f.Write(img);
 f.Close();
-@
 
 
 h2(#seealso). See also
