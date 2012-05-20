@@ -54,14 +54,13 @@ h3(#object-methods). Methods
 
 h2(#examples). Examples
 
-h3. Convert Image between formats
-
-<pre><code>#!/home/dev/bin/bondi
+```javascript
+// Convert image format of jpg image loaded from disk to png then saving the image out
 var img = new Image("test.jpg");
 img.Format = "PNG24";
 var f = File.Open("test.png", "wb");
 f.Write(img);
 f.Close();
-</code></pre>
+```
 
 h2(#seealso). See also
