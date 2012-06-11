@@ -27,5 +27,16 @@ h3(#object-methods). Methods
 - ExecuteToString() := =:
 
 h2(#examples). Examples
+<pre><code>
+  var T = new TemplateEngine();
+  T.RootDirectory = TemplateDirectories();
+  T.Input = "/merchant/search.ezitpl";
+  T.AddProperty("securehost", Request.ServerVariables.HTTP_HOST);
+  T.AddDataset("merchantaccounts", MerchantList);
+  T.AddDataset("results", SearchResults);
+  T.AddMacro("/common.ezimac");
+  T.Execute();
+</code></pre>
+
 
 h2(#seealso). See also
