@@ -30,6 +30,7 @@ h2(#examples). Examples
 <pre><code>
   var T = new TemplateEngine();
   T.RootDirectory = TemplateDirectories();
+  T.DataSource = Db;
   T.Input = "/merchant/search.ezitpl";
   T.AddProperty("securehost", Request.ServerVariables.HTTP_HOST);
   T.AddDataset("merchantaccounts", MerchantList);
@@ -37,6 +38,5 @@ h2(#examples). Examples
   T.AddMacro("/common.ezimac");
   T.Execute();
 </code></pre>
-
 
 h2(#seealso). See also
