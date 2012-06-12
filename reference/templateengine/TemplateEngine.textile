@@ -35,6 +35,7 @@ h2(#examples). Examples
   T.AddProperty("securehost", Request.ServerVariables.HTTP_HOST);
   T.AddDataset("merchantaccounts", MerchantList);
   T.AddDataset("results", SearchResults);
+  T.AddData("/common.ezisql");
   T.AddMacro("/common.ezimac");
   T.Execute();
 </code></pre>
