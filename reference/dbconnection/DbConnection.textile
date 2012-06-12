@@ -16,7 +16,7 @@ h2(#description). Description
 
 h2(#properties). Properties
 
-- EvalContext
+- EvalContext := Pass an object hash with functions or values which can then be eval()'ed within a SQL
 - Identity (read-only) := Returns the identity value on the most recent command execution, if it applies.
 - ReadOnly := Either "true" or "false".
 - RowPrototype
@@ -47,6 +47,10 @@ dbConn.BeginTrans();
 dbConn.Execute("CREATE TABLE IF NOT EXISTS testycool ( id INTEGER NOT NULL AUTOINCREMENT)");
 dbConn.CommitTrans();
 ```
+
+<pre><code>Db.EvalContent = { 
+  PriceIncTax : PriceIncTax
+};</code></pre>
 
 h2(#seealso). See also
 
