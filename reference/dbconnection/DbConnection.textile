@@ -50,7 +50,10 @@ dbConn.CommitTrans();
 
 <pre><code>Db.EvalContent = { 
   PriceIncTax : PriceIncTax
-};</code></pre>
+};
+//Then in your Query:
+"SELECT eval('PriceIncTax(Arguments)',Price, Tax) FROM Products"
+</code></pre>
 
 h2(#seealso). See also
 
