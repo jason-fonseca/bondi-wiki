@@ -41,5 +41,13 @@ function func3() {
 
 func1();
 ```
+<h3>Find the line number</h3>
+<code><pre>
+//line of the first callee
+Response.Write(Debug.BackTrace()[0].LineNumber);
+
+//current line
+Response.Write(Debug.BackTrace()[Debug.BackTrace().length-1].LineNumber);
+</code></pre>
 
 h2(#seealso). See also
