@@ -50,7 +50,7 @@ fcgi.Open("POST", "fastcgi://localhost:1036/mobile/");
 fcgi.SetRequestHeader("CONTENT_TYPE", "application/octet-stream");
 fcgi.ConnectTimeout = 30000;
 fcgi.SendTimeout = 30000;
- fcgi.Send(JSON.stringify({
+fcgi.Send(JSON.stringify({
             host: host,
             response:response,
             action:'ProbeMobile',
@@ -66,7 +66,7 @@ fcgi.Close();
 
 
 h3. mobile.esp
-<code><pre>
+<pre><code>
 #mobile.esp
 
 var inp = JSON.parse(Request.BinaryRead());
@@ -85,6 +85,6 @@ var json =      JSON.stringify({
 });
 Response.BinaryWrite(json);
 Response.End();
-</pre></code>
+</code></pre>
 
 h2(#seealso). See also
