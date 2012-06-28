@@ -38,5 +38,26 @@ h2(#examples). Examples
 ```javascript
 
 ```
+<h1>Run a bondi script inside a sandringham and pass data to it</h1>
+<code><pre>
+#mobile.esp
+
+var inp = JSON.parse(Request.BinaryRead());
+var response = inp.response;
+var host = inp.host;
+var MerchantID = inp.merchantid;
+
+Server.Include("/include/mobile.esp");
+
+mobile[inp.action](response, host, catalogurl, href, MerchantID);
+
+Response.ContentType = "application/json";
+var json =      JSON.stringify({
+        "response" : response,
+        "host" : host
+});
+Response.BinaryWrite(json);
+Response.End();
+</code></pre>
 
 h2(#seealso). See also
