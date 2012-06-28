@@ -38,7 +38,34 @@ h2(#examples). Examples
 ```javascript
 
 ```
-<h1>Run a bondi script inside a sandringham and pass data to it</h1>
+
+***
+
+h2. Run a bondi script inside a sandringham and pass data to it
+
+h3. FastCGI Call
+<pre><code>
+var fcgi = new FastCGIClient();
+fcgi.Open("POST", "fastcgi://localhost:1036/mobile/");
+fcgi.SetRequestHeader("CONTENT_TYPE", "application/octet-stream");
+fcgi.ConnectTimeout = 30000;
+fcgi.SendTimeout = 30000;
+ fcgi.Send(JSON.stringify({
+            host: host,
+            response:response,
+            action:'ProbeMobile',
+            url:url,
+            href: href,
+            merchantid: Request.ServerVariables.MERCHANT
+            }));
+var fresponse = JSON.parse(fcgi.ResponseBody);
+host = fresponse.host;
+response = fresponse.response;
+fcgi.Close();
+</code></pre>
+
+
+h3. mobile.esp
 <code><pre>
 #mobile.esp
 
@@ -58,6 +85,6 @@ var json =      JSON.stringify({
 });
 Response.BinaryWrite(json);
 Response.End();
-</code></pre>
+</pre></code>
 
 h2(#seealso). See also
