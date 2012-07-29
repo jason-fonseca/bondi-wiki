@@ -9,6 +9,10 @@ h2(#properties). Properties
 - ProcessId (read-only) := The process id (or pid) of the running bondi instance.
 - ProcessName := The process name of the running bondi instance, can be changed.
 
+h2(#properties). Methods
+
+- Exit := If the bondi process is running in a process pool - calling Exit will signal that the controlling daemon should shut down the entire pool. NOTE: the currently executing script will continue to completion after Application.Exit(); returns - use Response.End(); to stop the script.
+
 All environment variables available at process startup are present as properties on the Application object.
 
 Additionally, you can add properties here that will persist beyond page execution.
