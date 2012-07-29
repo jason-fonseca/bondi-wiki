@@ -11,7 +11,7 @@ h2(#properties). Properties
 
 h2(#properties). Methods
 
-- Exit := If the bondi process is running in a process pool - calling Exit will signal that the controlling daemon should shut down the entire pool. NOTE: the currently executing script will continue to completion after Application.Exit(); returns - use "Response.End();":https://github.com/ontech/bondi/wiki/Response to stop the script.
+- Exit := If the bondi process is running in a process pool - calling Exit will signal that the controlling daemon should shut down the entire pool. NOTE: the currently executing script will halt as if "Response.End();":[Response] was called.
 
 All environment variables available at process startup are present as properties on the Application object.
 
