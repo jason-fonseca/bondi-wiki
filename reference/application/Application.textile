@@ -35,6 +35,7 @@ for (var x in Application)
 ```
 
 ```
+//Application when run as Shell
 {
 	"TERM": "xterm",
 	"SHELL": "/bin/bash",
@@ -54,5 +55,89 @@ for (var x in Application)
 	"LESSOPEN": "| /usr/bin/lesspipe %s",
 	"LESSCLOSE": "/usr/bin/lesspipe %s %s",
 	"_": "/usr/bin/bondi"
+}
+```
+
+```
+//Application when run through nginx
+{
+	"ODBCSYSINI": "/home/nwo/etc",
+	"NWO_WEBHOST": "www.ezimerchant.com",
+	"NWO_SECUREHOST": "secure.ezimerchant.com",
+	"NWO_NEWPORT": "^(?:www\\.|test\\.)?ezimerchant\\.com\\.?$",
+	"NWO_BILGOLA": "(?:\\.?|^)ezibuy\\.it\\.?$",
+	"NWO_SECURE": "^secure\\.ezimerchant\\.com\\.?$|^(?:anz|rba|actioncoach|paymentexpress)\\.ezimerchant\\.com\\.?$|beta\\.netmerchant\\.com\\.au\\.?$|secure\\.cdwpay\\.com\\.?$",
+	"NWO_REBRAND": "^(?:www\\.)?(?:anz|rba|actioncoach|paymentexpress)\\.ezimerchant\\.com\\.?$|beta\\.netmerchant\\.com\\.au\\.?$|secure\\.cdwpay\\.com\\.?$",
+	"BONDI_SCRIPT": "/mnode.esp",
+	"BONDI_STARTSCRIPT": "/home/nwo/approot/startscript.esp",
+	"BONDI_APPROOT": "/home/nwo/approot",
+	"BONDI_GEOIPDB": "/home/nwo/approot/include/GeoLiteCity.dat",
+	"BONDI_MAIL": "/usr/sbin/sendmail -t -i -f {0} -r {1}",
+	"BONDI_TIMEOUT": "30",
+	"BONDI_QUEUE": "sqlite:/mnodequeue.db",
+	"NWO_INTERNALNET": "ontech.local",
+	"BONDI_PIDFILE": "/home/nwo/var/run/mnode.pid",
+	"NWO_SERVER": "aws-mnode-us-w-5",
+	"FCGI_MAX_REQUESTS": "50",
+	"FCGI_WEB_SERVER_ADDRS": "127.0.0.1",
+	"LC_CTYPE": "en_US.UTF-8",
+	"MerchantMap": {},
+	"DomainMap": {},
+	"NewportMatch": {},
+	"BilgolaMatch": {},
+	"SecureMatch": {},
+	"RebrandMatch": {},
+	"WebHost": "www.ezimerchant.com",
+	"SecureHost": "secure.ezimerchant.com",
+	"InternalNet": ".ontech.local",
+	"RequireSSL": true,
+	"SecureVaultServer": "fastcgi://kurnell.ontech.local:1113/",
+	"CurrencyServer": "fastcgi://cronulla.ontech.local:1114/",
+	"LadyRobinsonServer": "fastcgi://ladyrobinson.ontech.local:1115/",
+	"IQSoapServer": "http://addrmatch.ontech.local:82/",
+	"PayPalApiUserName": "sales_api1.ezimerchant.com",
+	"PayPalApiPassword": "WAG5HBZRZ5YWHWVC",
+	"PayPalApiCert": {
+		"Subject": "/CN=sales_api1.ezimerchant.com/O=ezimerchant/L=Glenhaven/ST=New South Wales/C=AU",
+		"Issuer": "/C=US/ST=California/L=San Jose/O=PayPal, Inc./OU=live_certs/CN=live_camerchapi/emailAddress=re@paypal.com",
+		"Version": 2,
+		"Serial": 52362,
+		"Signature": "¥H#)&Ôß2Ý#M¤°?uÍOÔÏ¤=wi¼_#Ø¤åbÆ\u0001M¿\u0019,sQ\u0016ôû/A+ÇÎlÿÛp\u001dRzòµA°W`:èí«-k+?I8\u0010\u001bëI5¦äñ\u0001\u0019U¬ï\u0017W:iâF/\u0000YÔµÀRhM¿ü±]§«ÒÃùAtÀ÷×MåÇ´",
+		"NotBefore": "2007-04-17T00:43:36.000Z",
+		"NotAfter": "2017-04-14T00:43:36.000Z"
+	},
+	"PayPalApiCertPath": "/include/certs/paypalapi.pem",
+	"PayPalApiServer": "https://api.paypal.com/nvp",
+	"PayPalHost": "www.paypal.com",
+	"EbayApiServer": "https://api.ebay.com/ws/api.dll",
+	"EbayCompatLevel": 613,
+	"EbayAppName": "OnTechno-d373-4456-bc0c-c8ca47b63116",
+	"EbayDevName": "5a5ed90a-e3bf-4775-85fb-9fd04b8f2a61",
+	"EbayCertName": "bb8c42f5-980f-43ed-9fd9-0964e2389b8e",
+	"EbayRUName": "OnTechnology_Pt-OnTechno-d373-4-skzbwwh",
+	"XeroKey": "YTA2MTGWMDA5NJLMNDA2ZTHIZWM5ZT",
+	"XeroCert": {
+		"Subject": "/C=NZ/O=Xero/CN=ezimerchant",
+		"Issuer": "/C=US/O=Entrust/OU=Certification Authorities/OU=Commercial Private Sub CA1",
+		"Version": 2,
+		"Serial": 1238489965,
+		"Signature": "I\f³y]7¦xJé¿6_\u0016\b\u0016\u000f¾KAàNcl\u001c~&:\u0017P%ëæeÌ}HL]c®BKMÔW¶\u0010¨/KÒ[²Ï¡\r\b\u0015é«Ð3µRöeû@ÔþÍ$8®Ã[ÚE@JÌÀJ\u001c\u0012£q88Õ5ö°\u0002HS±â+±~\u0014Î\u0003*FDc²5qGM¾7Z^,ý÷IÀÌ\u0010zR\u001b9k\u001d«½y\u000bjf\fàv\u001d\u0011U/0ZGH1ØVÓËuA&1Ou\t:\tÁ\tê1Ýä\u0014\u000f9í+üMC@\u000f-°é)\u0004ùl`w\u001e\u0007N\u0002³'Ö2ù®Ü.^ÙYqü:ôÓà_\u0000¤\u0016G®¿@À@IcÕ",
+		"NotBefore": "2011-11-24T21:04:24.000Z",
+		"NotAfter": "2012-11-24T21:34:24.000Z"
+	},
+	"OAuthPrivateKey": {},
+	"GoogleAnalyticsScript": "https://ssl.google-analytics.com/ga.js",
+	"LadyRobinsonMasterKeys": [
+		{
+			"Key": "+qvmtNAJhoZBkd8Svw1L+Ema7fi+hozYgcENkMcHVHqputOV/0JHQh0Fr+LR2RGFTUyc5x54qIzL4jKJ59CeXs5jaVKIESSCn1lEby/pUqkV2KvAyxv9bi2sDMkWSO9BG8L7dLe5WHxukXQPO6TtXeMFkH8iJu156MBNT5ODPOM=",
+			"Algorithm": "BLOWFISH",
+			"Hash": "SHA256"
+		},
+		{
+			"Key": "basin",
+			"Algorithm": "BLOWFISH",
+			"Hash": "SHA256"
+		}
+	]
 }
 ```
