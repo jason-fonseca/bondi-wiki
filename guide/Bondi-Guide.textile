@@ -1,5 +1,12 @@
 (This page is a work in progress and is due for a revamp shortly)
 
+h1. What is Bondi?
+
+Bondi is a synchronus server side javascript language with extra sauce. That extra sauce is a bunch of C libraries bolted in and exposed as native js code.
+
+Bondi contains a super fast templating engine called avalon.
+
+
 h1. Object Model
 
 h2. Intrinsic Objects (no need to instantiate)
