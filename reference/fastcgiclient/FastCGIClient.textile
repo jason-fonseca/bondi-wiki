@@ -10,9 +10,7 @@ h2(#description). Description
 
 h2(#properties). Properties
 
-- ConnectTimeout :=
-
-=:
+- ConnectTimeout 
 - ReceiveTimeout
 - ResponseBody
 - ResponseObject 
@@ -24,9 +22,7 @@ h2(#properties). Properties
 
 h2(#methods). Methods
 
-- Close() :=
-
-=:
+- Close() 
 - GetAllResponseHeaders()
 - GetResponseHeader()
 - Open()
@@ -35,17 +31,16 @@ h2(#methods). Methods
 
 h2(#examples). Examples
 
-```javascript
+h3. Typical way to call a sandringham service
+<pre><code>var f = new FastCGIClient();
+f.Open("GET", "fastcgi://127.0.0.1:1088/homepage?" + FormData({url:"http://www.google.com/"}));
+f.Send();
+var NewURL = JSON.parse(f.ResponseBody);</code></pre>
 
-```
+h3. Run a bondi script inside a sandringham and pass data to it
 
-***
-
-h2. Run a bondi script inside a sandringham and pass data to it
-
-h3. FastCGI Call
-<pre><code>
-var fcgi = new FastCGIClient();
+h4. FastCGI Call
+<pre><code>var fcgi = new FastCGIClient();
 fcgi.Open("POST", "fastcgi://localhost:1036/mobile/");
 fcgi.SetRequestHeader("CONTENT_TYPE", "application/octet-stream");
 fcgi.ConnectTimeout = 30000;
@@ -65,19 +60,14 @@ fcgi.Close();
 </code></pre>
 
 
-h3. mobile.esp
-<pre><code>
-#mobile.esp
-
+h4. mobile.esp
+<pre><code>#mobile.esp
 var inp = JSON.parse(Request.BinaryRead());
 var response = inp.response;
 var host = inp.host;
 var MerchantID = inp.merchantid;
-
 Server.Include("/include/mobile.esp");
-
 mobile[inp.action](response, host, catalogurl, href, MerchantID);
-
 Response.ContentType = "application/json";
 var json =      JSON.stringify({
         "response" : response,
