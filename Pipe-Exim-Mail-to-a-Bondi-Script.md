@@ -3,7 +3,7 @@ Posted 10:33:11 PM on Wed, 17th August 2011 by Dean
 Here is a short example of how to have exim4 pipe emails to a script. Basically it uses the 'pipe' transport to feed the email to the script via STDIN. I'm going to assume the reader is familiar with exim enough that i won't explain what transports and routers are, or where they belong in the exim config file. In this example, i will have exim feed all emails for a single domain to the script, you can configure exim to use other criteria such as user names, regular expressions, database lookups etc. The exim4 documenation will explain these options. Anyway.
 
 You should begin by creating a domain list such as
-domainlist cmd_domains = cmd.your-domain.com
+`domainlist cmd_domains = cmd.your-domain.com`
 Then either add cmd_domains to local_domains, or look for the dnslookup driver and add the domain next to the list next to local_domains. 
 
 Add the below to the router section
