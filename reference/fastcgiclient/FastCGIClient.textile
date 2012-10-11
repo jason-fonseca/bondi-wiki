@@ -36,6 +36,10 @@ h3. Simple example script
 ```javascript
 #!/home/nwo/bin/bondi
 
+/* this script relies on sandringham being run like so:
+ * ./bin/sandringham -logger "/usr/bin/logger \"{message}\"" -children 1 -listen 4050 -service
+ */
+
 Response.Write("starting\n");
 
 var s = "args: " + Request.QueryString["script"].join(",") + "\n";
@@ -48,15 +52,20 @@ Response.Write("done\n");
 ```
 
 h3. Typical way to call a sandringham service
-<pre><code>var f = new FastCGIClient();
+
+```javascript
+var f = new FastCGIClient();
 f.Open("GET", "fastcgi://127.0.0.1:1088/homepage?" + FormData({url:"http://www.google.com/"}));
 f.Send();
-var NewURL = JSON.parse(f.ResponseBody);</code></pre>
+var NewURL = JSON.parse(f.ResponseBody);
+```
 
 h3. Run a bondi script inside a sandringham and pass data to it
 
 h4. FastCGI Call
-<pre><code>var fcgi = new FastCGIClient();
+
+```javascript
+var fcgi = new FastCGIClient();
 fcgi.Open("POST", "fastcgi://localhost:1036/mobile/");
 fcgi.SetRequestHeader("CONTENT_TYPE", "application/octet-stream");
 fcgi.ConnectTimeout = 30000;
@@ -73,11 +82,12 @@ var fresponse = JSON.parse(fcgi.ResponseBody);
 host = fresponse.host;
 response = fresponse.response;
 fcgi.Close();
-</code></pre>
-
+```
 
 h4. mobile.esp
-<pre><code>#mobile.esp
+
+```javascript
+#mobile.esp
 var inp = JSON.parse(Request.BinaryRead());
 var response = inp.response;
 var host = inp.host;
@@ -91,6 +101,6 @@ var json =      JSON.stringify({
 });
 Response.BinaryWrite(json);
 Response.End();
-</code></pre>
+```
 
 h2(#seealso). See also
