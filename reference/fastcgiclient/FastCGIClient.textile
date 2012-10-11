@@ -31,6 +31,22 @@ h2(#methods). Methods
 
 h2(#examples). Examples
 
+h3. Simple example script
+
+```javascript
+#!/home/nwo/bin/bondi
+
+Response.Write("starting\n");
+
+var s = "args: " + Request.QueryString["script"].join(",") + "\n";
+var f = new FastCGIClient();
+f.Open("GET", "fastcgi://localhost:4050/logger?message=" + encodeURIComponent(s));
+f.Send();
+
+Response.Write("f.Status = " + f.Status + "\n");
+Response.Write("done\n");
+```
+
 h3. Typical way to call a sandringham service
 <pre><code>var f = new FastCGIClient();
 f.Open("GET", "fastcgi://127.0.0.1:1088/homepage?" + FormData({url:"http://www.google.com/"}));
