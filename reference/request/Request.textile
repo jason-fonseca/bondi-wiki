@@ -20,6 +20,8 @@ h2(#methods). Methods
 - BinaryRead([bytes]) := Reads binary data from stream, if optional bytes argument is provided, read is limited to the byte count requested. Returns binary data as string.
 - Cookies.Decrypt(cookie, keys) := Helper method to decrypt a cookies value with provided keys.
 
+- EnforceSSL() := Redirects if the request is not via SSL.
+
 h2(#examples). Examples
 
 ```javascript
