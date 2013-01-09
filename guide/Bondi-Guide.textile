@@ -23,7 +23,7 @@ h2. Intrinsic Objects (no need to instantiate)
 [[UUID]]
 [[Geography]]
 [[WhoIs]]
-
+[[Debug]]
 [[Queue]]
 
 h2. Constructable Objects
