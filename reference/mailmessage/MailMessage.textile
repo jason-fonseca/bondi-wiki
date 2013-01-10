@@ -20,7 +20,7 @@ h2(#object-instances). MailMessage Instances
 
 h3(#object-properties). Properties
 
-- Attachments := A Read-Only array of attachments to send, attachment objects in the array will have properties: Name, ContentType, File. The object File property can be a filename string or stream.
+- Attachments := A Read-Only array of attachments to send, attachment objects in the array will have properties: Name, ContentType, File. The object File property can be a filename string or stream. (To add attachments, use <a href="#attachments">Attachments.Add</a>)
 - BCC := Get and set BCC addresses, can be assigned a single email address string or an array of them.
 - CC := Get and set CC addresses, can be assigned a single email address string or an array of them.
 - From := Get and set the From email address.
@@ -38,7 +38,7 @@ h3(#object-methods). Methods
 
 - Send([from [, to [, subject [, message]]]]) := Send email, optionally overriding the sections with arguments given for: from, to, subject and message. The optional to argument can be passed in as an array of email address strings.
 
-- Attachments.Add(Name, ContentType, File) := Add an attachment to the Attachments array to be sent attached to the mail message. File may be either a stream or the path of a file.
+- <a name="attachments"></a>Attachments.Add(Name, ContentType, File) := Add an attachment to the Attachments array to be sent attached to the mail message. File may be either a stream or the path of a file.
 
 h2(#examples). Examples
 
