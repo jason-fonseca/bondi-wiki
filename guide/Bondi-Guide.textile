@@ -17,6 +17,7 @@ h2. Intrinsic Objects (no need to instantiate)
 [[Server]]
 [[File]]
 [[DNS]]
+[[Dir]]
 [[DbParameters]]
 [[Crypto]]
 [[Base64]]
