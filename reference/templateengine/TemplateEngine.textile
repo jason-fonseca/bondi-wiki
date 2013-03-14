@@ -42,7 +42,7 @@ h2(#examples). Examples
 
 It is possible to apply control constructs to templates which allow you to customize presentation to your liking. E.g you might want to iterate over a dataset and display the values and apply a style to every second row in a table that represents that dataset.
 
-The following snippet demonstrates iterating over a dataset named "PersonDataSet" starting from a particular row and proceeding count rows beyond that. This is useful for implementation a paged view.
+The following snippet demonstrates iterating over a dataset named "PersonDataset" starting from a particular row and proceeding count rows beyond that. This is useful for implementing a paged view.
 
 Note the c and p variables come from the QueryString which is added to the particular instance of the Template engine via something like
 <pre><code>
