@@ -59,7 +59,7 @@ The position variable is an internal TemplateEngine variable which maintains the
     <td><span>{PersonDataSet.Name}</span></td>
     <td><span>{PersonDataSet.Age}</span></td>
   {/for}
-  <tr>
+  </tr>
 </tbody>
 </code></pre>
 
