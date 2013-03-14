@@ -40,4 +40,28 @@ h2(#examples). Examples
   T.Execute();
 </code></pre>
 
+It is possible to apply control constructs to templates which allow you to customize presentation to your liking. E.g you might want to iterate over a dataset and display the values and apply a style to every second row in a table that represents that dataset.
+
+The following snippet demonstrates iterating over a dataset named "PersonDataSet" starting from a particular row and proceeding count rows beyond that. This is useful for implementation a paged view.
+
+Note the c and p variables come from the QueryString which is added to the particular instance of the Template engine via something like
+<pre><code>
+var T = TemplateEngine();
+T.QueryString = Request.QueryString;
+</code></pre>
+
+The position variable is an internal TemplateEngine variable which maintains the current row index which you could use in conjunction with the modulus operator to colour every second row.
+
+<pre><code>
+<tbody>
+  {for PersonDataset start={notblank((p - 1)*notblank(c,10) + 1,1)} count={notblank(c,10)}}
+  <tr {if (position % 2=0)} class="prettyrow" {/if}>
+    <td><span>{PersonDataSet.Name}</span></td>
+    <td><span>{PersonDataSet.Age}</span></td>
+  {/for}
+  <tr>
+</tbody>
+</code></pre>
+
+
 h2(#seealso). See also
