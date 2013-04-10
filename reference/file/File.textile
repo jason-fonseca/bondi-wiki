@@ -69,7 +69,10 @@ h3(#object-methods). Methods
 - Close() := Closes file stream.
 - Read(size) := Read data from file up to given size.
 - ReadLine(size) := Read line of data from file up to given size.
+* Not currently implemented as of 10/04/2013. https://github.com/ontech/bondi/issues/80
 - ReadLines(sizehint) := Read lines of data from file taking into consideration the size hint.
+* Not currently implemented as of 10/04/2013. https://github.com/ontech/bondi/issues/80
+
 - Seek(offset, whence)
 - Truncate(size)
 - Write(str)
