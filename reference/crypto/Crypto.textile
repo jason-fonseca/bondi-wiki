@@ -30,7 +30,7 @@ h2(#methods). Methods
 - DecryptAndVerify(method, key, iv, data [, padding]) := Takes an encryption method and hash (eg. "AES-MD5", "DES-SHA1"), key, initialization vector, data to decrypt and verify and optionally the padding mode (as above for Decrypt), returns decrypted and verified data.
 - Encrypt(method, key, iv, data [, padding]) := Takes an encryption method (eg. "AES", "DES"), key, initialization vector, data to encrypt and optionally the padding mode (as above for Decrypt), returns encrypted data.
 - EncryptAndSign(method, key, iv, data [, padding]) := Takes an encryption method and hash (eg. "AES-MD5", "DES-SHA1"), key, initialization vector, data to encrypt and sign and optionally the padding mode (as above for Decrypt), returns encrypted and signed data.
-- Hash(method, data) := Takes a hash method (eg. Crypto.MD5, Crypto.SHA1) and data, returns a cryptographic hash value of the data.
+- Hash(method, data) := Takes a hash method (eg. "MD5", "SHA1") and data, returns a cryptographic hash value of the data.
 - Hash(method, key, data) := Used for MAC (message authentication code) checking, takes a hash method (eg. "MD5", "SHA1"), key and data, returns a MAC (message authentication code) that can be used to compare.
 - Key([data]) := Optionally takes data and returns a key that can be used in the encrypt and decrypt functions ensuring the correct size for the algorithm method used, if no data is provided a key generated with random data will be returned.
 - Random (number of bytes) := Returns the request number of cryptographically random bytes.
