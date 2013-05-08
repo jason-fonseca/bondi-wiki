@@ -49,7 +49,7 @@ Mode can be any of the following:
 Encoding should most likely be any of those supported by "iconv":http://www.gnu.org/software/libiconv/ since Bondi makes use of the library.
 
 =:
-- OpenTemporaryFile(fileprefix [, mode]) := Open temporary file with optional mode, will be deleted once closed from file system, returns a file stream object with property: FileName.
+- OpenTemporaryFile(fileprefix [, mode]) := Open temporary file with optional mode. Can be used to generate an available filename within the system.  returns a file stream object with property: FileName.
 - Rename(filename, filename [, flags]) := Takes two filename arguments and optional flags, attempts to rename the first filename to the second. Throws exceptions on failure, doesn't return any value.
 - Stat(filename) := Takes a filename argument, if filename exists, returns a file stat object with properties: Id, AccessTime, CreateTime, ModifiedTime, Size.
 
