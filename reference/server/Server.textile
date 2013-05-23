@@ -8,8 +8,11 @@ h2(#description). Description
 
 h2(#properties). Properties
 
+- Timeout := Setting for timeout in Milliseconds
+
 h2(#methods). Methods
 
+- Sleep(ms) := Sleep for ms Milliseconds
 - Include()
 - Require() := Like server include - but ensures the file being pulled in only enters scope once for the current execution
 - Import(module name) :=
