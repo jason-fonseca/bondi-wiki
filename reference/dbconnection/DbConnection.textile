@@ -50,7 +50,7 @@ dbConn.Execute("CREATE TABLE IF NOT EXISTS testycool ( id INTEGER NOT NULL AUTOI
 dbConn.CommitTrans();
 ```
 
-<pre><code>Db.EvalContent = { 
+<pre><code>Db.EvalContext = { 
   PriceIncTax : PriceIncTax
 };
 //Then in your Query:
