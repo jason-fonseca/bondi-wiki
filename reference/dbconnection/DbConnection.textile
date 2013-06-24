@@ -7,8 +7,6 @@ h2(#syntax). Syntax
 ```javascript
 var dbconn = new DbConnection("sqlite:test.db");
 var dbconn = new DbConnection("sqlite::memory:");
-var dbconn = new DbConnection("sqlite::" + MerchantID + "_ProductImages::memory"); // memory URI filename
-var dbconn = new DbConnection("sqlite::" + MerchantID + "_ProductImages::memory?cache=shared"); //memory URI filename. Allows seperate database connections to share the same in-memory database
 var dbconn = new DbConnection("odbc:");
 ```
 
