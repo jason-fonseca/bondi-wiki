@@ -1,4 +1,3 @@
-
 1, sudo apt-get install exim4
 1. dpkg-reconfigure exim4-config
 1. Choose smarthost, define the current host with the domain name (like ezimerchantdev.com)
@@ -17,7 +16,7 @@ cmd_router:
   domains = +cmd_domains
   transport = cmd_transport</code></pre>
 
-#put it below `begin transports`
+put it below `begin transports`
 Add this to the transports section
 <code><pre>cmd_transport:
   debug_print = "T: using cmd_transport"
