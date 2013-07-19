@@ -63,5 +63,18 @@ The position variable is an internal TemplateEngine variable which maintains the
 </tbody>
 </code></pre>
 
+You may also sort inside a for loop by using code similar to the following
 
+<pre><code>
+   {for myset sort="myfield"}
+      //do stuff
+   {/for}
+</pre></code>
+
+The sort is effectively an ORDER BY clause so you can do sorts as follows
+<pre> <code>
+{for myset sort="rowid DESC"}
+{for myset sort={sortby = "price" ? "price" : ""}}
+
+</pre> </code>
 h2(#seealso). See also
