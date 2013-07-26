@@ -33,7 +33,8 @@ new (function() {
 
 =:
 
-- Execute()
+- Execute() :=you can pass an object as third arg to Server.ExecuteAsync and it will stream it via msg-pack to Request.Form in the child
+
 - Transfer()
 - ExecuteAsync()
 - ExecuteAsyncNoReturn() :=
