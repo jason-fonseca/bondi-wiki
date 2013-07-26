@@ -33,11 +33,11 @@ new (function() {
 
 =:
 
-- Execute() := executes script
+- Execute() := you can pass an object as third arg to Server.Execut and it will stream it via msg-pack to Request.Form in the child
 
 - Transfer()
-- ExecuteAsync() :=you can pass an object as third arg to Server.ExecuteAsync and it will stream it via msg-pack to Request.Form in the child
-- ExecuteAsyncNoReturn() :=
+- ExecuteAsync() :=you can pass an object as third arg to Server.ExecuteAsync and it will stream it via msg-pack to Request.Form but no child is created
+- ExecuteAsyncNoReturn() := you can pass an object as third arg to Server.ExecuteAsyncNoReturn and it will stream it via msg-pack to Request.Form in the child
 
 =:
 
