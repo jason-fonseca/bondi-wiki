@@ -40,10 +40,15 @@ Response.Cookies.Test.HttpOnly = true;
 Response.Cookies.Encrypt(Test2, {Key: 'Key', Algorithm: 'BLOWFISH', Hash: 'SHA1'}, 'Hello World');
 Response.Cookies.Encrypt(Test3, {Key: 'Key2', Algorithm: 'AES', Hash: 'MD5'}, Test);
 
-// To see the values
-Response.Write("Response.Cookies.Test =" + Response.Cookies.Test);
-Response.Write("Response.Cookies.Test2 = " + Response.Cookies.Test2);
-Response.Write("Response.Cookies.Test3 = " + Response.Cookies.Test3);
+// To see the values: 
+Response.Write("Request.Cookies.Test =" + Request.Cookies.Test);
+Response.Write("Request.Cookies.Test2 = " + Request.Cookies.Test2);
+Response.Write("Request.Cookies.Test3 = " + Request.Cookies.Test3);
+
+
+
+// To delete the values
+Response.Cookies.Test = null;
 ```
 
 h3. Response.Headers
