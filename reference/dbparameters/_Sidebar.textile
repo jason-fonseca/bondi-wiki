@@ -1,9 +1,0 @@
-"Summary":#summary
-"Description":#description
-"Properties":#properties
-"Examples":#examples
-"See also":#seealso
-
-[[Home]]
-[[Bondi Reference]]
-[[Bondi Guide]]

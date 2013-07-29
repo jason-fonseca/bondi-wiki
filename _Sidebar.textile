@@ -1,4 +1,0 @@
-[[Home]]
-[[Bondi Reference]]
-[[Bondi Guide]]
-[[Pipe Exim Mail to a Bondi Script]]
